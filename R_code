@@ -1,1 +1,36 @@
-R Code for data analysis
+# R Code for data analysis
+########################### Data Analytics Competition ##############################
+#Name: Zeyang Zhou
+#Email: zezhou@syr.edu
+
+########################### UPLOADING THE DATA #################################
+# Run these three functions to get a clean test of code
+dev.off() # Clear the graph window
+cat('\014')  # Clear the console
+rm(list=ls()) # Clear user objects from the environment
+
+# Set working directory 
+setwd("C:/Users/eva/Desktop/Loyola University Chicago Supply Chain Data Analytics Competition/Competition data")
+
+# Load libraries
+library(tidyverse)
+library(readr)
+library(xlsx)
+library(readxl)
+library(maps)
+library(ggmap)
+library(mapproj)
+
+# Load the datasets
+#CL<- read.xlsx("Feeding America Customer List.xlsx",1)
+CL<- read_excel("Feeding America Customer List.xlsx", sheet = 1)
+#Report_1<- read.xlsx2("PMM Offers 01.01.2018 YTD Report 1.xlsx",1)
+Report_1<- read_excel("PMM Offers 01.01.2018 YTD Report 1.xlsx", sheet = 1)
+#Report_2<- read.xlsx2("ProduceFreightSubsidySalesOrdersstart11120 Report 2.xlsx",1)
+Report_2<- read_excel("ProduceFreightSubsidySalesOrdersstart11120 Report 2.xlsx", sheet = 1)
+#Report_3<- read.xlsx2("ProduceTransactionReport3ByLineItems Report 3.xlsx",1)
+Report_3<- read_excel("ProduceTransactionReport3ByLineItems Report 3.xlsx", sheet = 1)
+str(CL)
+str(Report_1)
+str(Report_2)
+str(Report_3)
